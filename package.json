@@ -1,0 +1,128 @@
+{
+    "name": "vscode-sublime-emmet-keybinding",
+    "displayName": "Sublime emmet keybinding",
+    "description": "Keybindings for emmet based on sublime bindings of emmet",
+    "version": "0.0.1",
+    "publisher": "bkostrowiecki",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.version"
+    ],
+    "main": "./out/src/extension",
+    "contributes": {
+        "commands": [{
+            "command": "extension.version",
+            "title": "Version 0.1.0"
+        }],
+        "keybindings": [{
+            "win": "tab",
+            "key": "tab",
+            "command": "editor.emmet.action.expandAbbreviation",
+            "when": "config.emmet.triggerExpansionOnTab && editorTextFocus && !editorHasMultipleSelections && !editorHasSelection && !editorReadonly && !editorTabMovesFocus"
+        }, {
+            "win": "ctrl+alt+enter",
+            "key": "ctrl+alt+enter",
+            "command": "editor.emmet.action.wrapWithAbbreviation"
+        }, {
+            "win": "ctrl+,",
+            "key": "ctrl+,",
+            "command": "editor.emmet.action.balanceOutward"
+        }, {
+            "win": "shift+ctrl+0",
+            "key": "shift+ctrl+0",
+            "command": "editor.emmet.action.balanceInward"
+        }, {
+            "win": "ctrl+alt+J",
+            "key": "ctrl+alt+J",
+            "command": "editor.emmet.action.matchingPair"
+        }, {
+            "win": "ctrl+alt+right",
+            "key": "ctrl+alt+right",
+            "command": "editor.emmet.action.nextEditPoint"
+        }, {
+            "win": "ctrl+alt+left",
+            "key": "ctrl+alt+left",
+            "command": "editor.emmet.action.previousEditPoint"
+        }, {
+            "win": "shift+ctrl+.",
+            "key": "shift+ctrl+.",
+            "command": "editor.emmet.action.selectNextItem"
+        }, {
+            "win": "shift+ctrl+,",
+            "key": "shift+ctrl+,",
+            "command": "editor.emmet.action.selectPreviousItem"
+        }, {
+            "win": "shift+ctrl+/",
+            "key": "shift+ctrl+/",
+            "command": "editor.emmet.action.toggleComment"
+        }, {
+            "win": "shift+ctrl+`",
+            "key": "shift+ctrl+`",
+            "command": "editor.emmet.action.splitJoinTag"
+        }, {
+            "win": "shift+ctrl+;",
+            "key": "shift+ctrl+;",
+            "command": "editor.emmet.action.removeTag"
+        }, {
+            "win": "ctrl+u",
+            "key": "ctrl+u",
+            "command": "editor.emmet.action.updateImageSize"
+        }, {
+            "win": "shift+ctrl+y",
+            "key": "shift+ctrl+y",
+            "command": "editor.emmet.action.evaluateMath"
+        }, {
+            "win": "shift+ctrl+r",
+            "key": "shift+ctrl+r",
+            "command": "editor.emmet.action.reflectCSSValue"
+        }, {
+            "win": "shift+ctrl+'",
+            "key": "shift+ctrl+'",
+            "command": "editor.emmet.action.updateTag"
+        },
+
+        {
+            "win": "ctrl+up",
+            "key": "ctrl+up",
+            "command": "editor.emmet.action.incrementNumberByOne"
+        }, {
+            "win": "ctrl+down",
+            "key": "ctrl+down",
+            "command": "editor.emmet.action.decrementNumberByOne"
+        }, {
+            "win": "alt+up",
+            "key": "alt+up",
+            "command": "editor.emmet.action.incrementNumberByOneTenth"
+        }, {
+            "win": "alt+down",
+            "key": "alt+down",
+            "command": "editor.emmet.action.decrementNumberByOneTenth"
+        }, {
+            "win": "shift+alt+up",
+            "key": "shift+alt+up",
+            "command": "editor.emmet.action.incrementNumberByTen"
+        }, {
+            "win": "shift+alt+down",
+            "key": "shift+alt+down",
+            "command": "editor.emmet.action.decrementNumberByTen"
+        }]
+    },
+    "scripts": {
+        "vscode:prepublish": "tsc -p ./",
+        "compile": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.0.3",
+        "vscode": "^1.0.0",
+        "mocha": "^2.3.3",
+        "@types/node": "^6.0.40",
+        "@types/mocha": "^2.2.32"
+    }
+}
