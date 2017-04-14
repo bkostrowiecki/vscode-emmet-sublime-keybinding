@@ -1,4 +1,4 @@
-# sublime-emmet-keybinding README
+# vscode-sublime-emmet-keybinding README
 
 This extension provides keybindings for emmet in style of Sublime Emmet plugin. For more info about keybindings, see https://github.com/sergeche/emmet-sublime.
 
